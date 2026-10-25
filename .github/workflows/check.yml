@@ -1,0 +1,41 @@
+name: Verify AI Auditor
+on: [push, pull_request]
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env: {POSTGRES_DB: auditor, POSTGRES_USER: auditor, POSTGRES_PASSWORD: auditor_local}
+        ports: ["55432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U auditor -d auditor"
+          --health-interval 5s --health-timeout 3s --health-retries 20
+      redis:
+        image: redis:7-alpine
+        ports: ["56379:6379"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - uses: actions/setup-node@v4
+        with: {node-version: "22", cache: npm, cache-dependency-path: frontend/package-lock.json}
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e ".[models,dev]"
+      - run: ruff check backend tests scripts --select F
+      - run: pytest -q
+      - run: npm ci && npm run build
+        working-directory: frontend
+      - run: alembic upgrade head
+      - name: Start app and worker
+        run: |
+          mkdir -p .data/logs
+          python -m uvicorn backend.api:app --host 127.0.0.1 --port 8000 > .data/logs/api.log 2>&1 &
+          python -m arq backend.worker.WorkerSettings > .data/logs/worker.log 2>&1 &
+          cd frontend
+          npm run start -- --port 3000 > ../.data/logs/web.log 2>&1 &
+      - run: npx playwright install --with-deps chrome && npm test
+        working-directory: frontend
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: verification, path: artifacts/}

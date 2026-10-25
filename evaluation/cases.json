@@ -1,0 +1,200 @@
+{
+  "version": "synthetic-v1",
+  "label_source": "assistant_authored_fixture",
+  "human_reviewed": false,
+  "notice": "Synthetic fixture agreement only. These cases do not establish real-world accuracy.",
+  "cases": [
+    {
+      "id": "basic-price",
+      "claim": "The Basic plan costs INR 199 per month.",
+      "expected": "supported",
+      "source_name": "d1-plans.md",
+      "line": 7,
+      "split": "development"
+    },
+    {
+      "id": "pro-price",
+      "claim": "The Pro plan costs INR 499 per month.",
+      "expected": "supported",
+      "source_name": "d1-plans.md",
+      "line": 8,
+      "split": "development"
+    },
+    {
+      "id": "wrong-pro",
+      "claim": "The Pro plan costs INR 299 per month.",
+      "expected": "contradicted",
+      "source_name": "d1-plans.md",
+      "line": 8,
+      "split": "development"
+    },
+    {
+      "id": "wrong-basic",
+      "claim": "The Basic plan costs INR 499 per month.",
+      "expected": "contradicted",
+      "source_name": "d1-plans.md",
+      "line": 7,
+      "split": "development"
+    },
+    {
+      "id": "max-upload",
+      "claim": "The maximum size of one uploaded file is 20 MB.",
+      "expected": "supported",
+      "source_name": "d2-uploads.md",
+      "line": 7,
+      "split": "development"
+    },
+    {
+      "id": "wrong-upload",
+      "claim": "The maximum size of one uploaded file is 50 MB.",
+      "expected": "contradicted",
+      "source_name": "d2-uploads.md",
+      "line": 7,
+      "split": "development"
+    },
+    {
+      "id": "pdf-format",
+      "claim": "PDF uploads are supported.",
+      "expected": "supported",
+      "source_name": "d2-uploads.md",
+      "line": 8,
+      "split": "development"
+    },
+    {
+      "id": "txt-format",
+      "claim": "TXT uploads are supported.",
+      "expected": "supported",
+      "source_name": "d2-uploads.md",
+      "line": 8,
+      "split": "development"
+    },
+    {
+      "id": "md-format",
+      "claim": "Markdown uploads are supported.",
+      "expected": "supported",
+      "source_name": "d2-uploads.md",
+      "line": 8,
+      "split": "development"
+    },
+    {
+      "id": "retention",
+      "claim": "Backup copies of deleted files are retained for 30 days.",
+      "expected": "supported",
+      "source_name": "d3-retention.md",
+      "line": 8,
+      "split": "development"
+    },
+    {
+      "id": "wrong-retention",
+      "claim": "Backup copies of deleted files are retained for 7 days.",
+      "expected": "contradicted",
+      "source_name": "d3-retention.md",
+      "line": 8,
+      "split": "development"
+    },
+    {
+      "id": "delete-time",
+      "claim": "Deleted files are removed from active storage within 24 hours.",
+      "expected": "supported",
+      "source_name": "d3-retention.md",
+      "line": 7,
+      "split": "development"
+    },
+    {
+      "id": "encryption",
+      "claim": "All stored files are encrypted with AES-256.",
+      "expected": "insufficient_evidence",
+      "source_name": null,
+      "line": null,
+      "split": "development"
+    },
+    {
+      "id": "team-seats",
+      "claim": "Every account can have unlimited team members.",
+      "expected": "insufficient_evidence",
+      "source_name": null,
+      "line": null,
+      "split": "development"
+    },
+    {
+      "id": "refunds",
+      "claim": "The service offers a 30-day refund guarantee.",
+      "expected": "insufficient_evidence",
+      "source_name": null,
+      "line": null,
+      "split": "development"
+    },
+    {
+      "id": "region",
+      "claim": "All customer data is stored in Germany.",
+      "expected": "insufficient_evidence",
+      "source_name": null,
+      "line": null,
+      "split": "development"
+    },
+    {
+      "id": "availability",
+      "claim": "The service guarantees 99.99 percent uptime.",
+      "expected": "insufficient_evidence",
+      "source_name": null,
+      "line": null,
+      "split": "held_out"
+    },
+    {
+      "id": "paraphrase-price",
+      "claim": "The monthly subscription fee for the Basic plan is INR 199.",
+      "expected": "supported",
+      "source_name": "d1-plans.md",
+      "line": 7,
+      "split": "held_out"
+    },
+    {
+      "id": "pro-paraphrase",
+      "claim": "A Pro subscription costs INR 499 each month.",
+      "expected": "supported",
+      "source_name": "d1-plans.md",
+      "line": 8,
+      "split": "held_out"
+    },
+    {
+      "id": "basic-annual",
+      "claim": "The Basic plan costs INR 199 per year.",
+      "expected": "contradicted",
+      "source_name": "d1-plans.md",
+      "line": 7,
+      "split": "held_out"
+    },
+    {
+      "id": "price-free",
+      "claim": "The Pro plan is free.",
+      "expected": "contradicted",
+      "source_name": "d1-plans.md",
+      "line": 8,
+      "split": "held_out"
+    },
+    {
+      "id": "limit-paraphrase",
+      "claim": "Each uploaded file can be at most 20 MB.",
+      "expected": "supported",
+      "source_name": "d2-uploads.md",
+      "line": 7,
+      "split": "held_out"
+    },
+    {
+      "id": "unrelated-platform",
+      "claim": "The app is available on Android.",
+      "expected": "insufficient_evidence",
+      "source_name": null,
+      "line": null,
+      "split": "held_out"
+    },
+    {
+      "id": "support-hours",
+      "claim": "Customer support is available 24 hours a day.",
+      "expected": "insufficient_evidence",
+      "source_name": null,
+      "line": null,
+      "split": "held_out"
+    }
+  ]
+}

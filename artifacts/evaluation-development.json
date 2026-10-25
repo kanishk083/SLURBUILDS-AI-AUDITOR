@@ -1,0 +1,994 @@
+{
+  "id": "6fada121-477c-4f6b-942c-048eb7f4593c",
+  "status": "completed",
+  "result": {
+    "pipeline_version": "hybrid-ablation-v2",
+    "retrieval_control": "same hybrid top-5; baseline disables grading/refinement; filter enables them; corrective adds bounded retries",
+    "model": "cross-encoder/nli-deberta-v3-small",
+    "nli_revision": "fa2804872c3b4bd748f38c0185cc85775361e735",
+    "embedding_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "source_manifest": [
+      {
+        "name": "d1-plans.md",
+        "checksum": "07b2149a30b598b30a7bc0c37f2fd1177a8448613681c1455c4e186ba08e5d58"
+      },
+      {
+        "name": "d2-uploads.md",
+        "checksum": "4e669b2981a66facdab3c8a20b8d8432b4da69d0d50382dd4752b5f79b05e0f4"
+      },
+      {
+        "name": "d3-retention.md",
+        "checksum": "2b2dc0bfc0956b11e09295e7ee2c3ec03f32aa8cdcf8cd3bd869db14d6572426"
+      }
+    ],
+    "dataset": "synthetic-v1",
+    "split": "development",
+    "label_source": "assistant_authored_fixture",
+    "human_reviewed": false,
+    "notice": "Synthetic fixture agreement only. These cases do not establish real-world accuracy.",
+    "modes": {
+      "baseline": {
+        "case_count": 16,
+        "fixture_agreement": 0.5,
+        "macro_f1": 0.496969696969697,
+        "per_class": {
+          "supported": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 8
+          },
+          "contradicted": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "f1": 0.7272727272727273,
+            "support": 4
+          },
+          "insufficient_evidence": {
+            "precision": 0.2857142857142857,
+            "recall": 0.5,
+            "f1": 0.36363636363636365,
+            "support": 4
+          }
+        },
+        "confusion": {
+          "supported": {
+            "supported": 2,
+            "contradicted": 1,
+            "insufficient_evidence": 5
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 4,
+            "insufficient_evidence": 0
+          },
+          "insufficient_evidence": {
+            "supported": 0,
+            "contradicted": 2,
+            "insufficient_evidence": 2
+          }
+        },
+        "retrieval_hit_rate": 1.0,
+        "recall_at5": 1.0,
+        "mrr_at5": 1.0,
+        "retrieval_metric_note": "First-round unique chunks; each annotated case has one expected source span. Missing-evidence cases excluded.",
+        "p50_ms": 765.0,
+        "p95_ms": 825.75,
+        "total_seconds": 11.96,
+        "cases": [
+          {
+            "case_id": "basic-price",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 375,
+            "verification_pairs": 5,
+            "citations": []
+          },
+          {
+            "case_id": "pro-price",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 715,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 7,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-pro",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 679,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 7,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-basic",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 708,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 7,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "max-upload",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 766,
+            "verification_pairs": 5,
+            "citations": []
+          },
+          {
+            "case_id": "wrong-upload",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 824,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 7,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "pdf-format",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 745,
+            "verification_pairs": 5,
+            "citations": []
+          },
+          {
+            "case_id": "txt-format",
+            "expected": "supported",
+            "predicted": "contradicted",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 831,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 1,
+                "line_end": 1
+              }
+            ]
+          },
+          {
+            "case_id": "md-format",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 761,
+            "verification_pairs": 5,
+            "citations": []
+          },
+          {
+            "case_id": "retention",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 764,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 7,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-retention",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 802,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 7,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "delete-time",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 815,
+            "verification_pairs": 5,
+            "citations": []
+          },
+          {
+            "case_id": "encryption",
+            "expected": "insufficient_evidence",
+            "predicted": "contradicted",
+            "agreement": false,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 819,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 3,
+                "line_end": 5
+              },
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 3,
+                "line_end": 5
+              }
+            ]
+          },
+          {
+            "case_id": "team-seats",
+            "expected": "insufficient_evidence",
+            "predicted": "contradicted",
+            "agreement": false,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 754,
+            "verification_pairs": 5,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 1,
+                "line_end": 1
+              },
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 1,
+                "line_end": 1
+              },
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 1,
+                "line_end": 1
+              }
+            ]
+          },
+          {
+            "case_id": "refunds",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 812,
+            "verification_pairs": 5,
+            "citations": []
+          },
+          {
+            "case_id": "region",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 792,
+            "verification_pairs": 5,
+            "citations": []
+          }
+        ]
+      },
+      "filter": {
+        "case_count": 16,
+        "fixture_agreement": 0.875,
+        "macro_f1": 0.8857142857142857,
+        "per_class": {
+          "supported": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 8
+          },
+          "contradicted": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "insufficient_evidence": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 4
+          }
+        },
+        "confusion": {
+          "supported": {
+            "supported": 6,
+            "contradicted": 0,
+            "insufficient_evidence": 2
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 4,
+            "insufficient_evidence": 0
+          },
+          "insufficient_evidence": {
+            "supported": 0,
+            "contradicted": 0,
+            "insufficient_evidence": 4
+          }
+        },
+        "retrieval_hit_rate": 1.0,
+        "recall_at5": 1.0,
+        "mrr_at5": 1.0,
+        "retrieval_metric_note": "First-round unique chunks; each annotated case has one expected source span. Missing-evidence cases excluded.",
+        "p50_ms": 405.5,
+        "p95_ms": 580.0,
+        "total_seconds": 5.95,
+        "cases": [
+          {
+            "case_id": "basic-price",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 570,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "case_id": "pro-price",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 406,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-pro",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 374,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-basic",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 376,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "case_id": "max-upload",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 405,
+            "verification_pairs": 2,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-upload",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 469,
+            "verification_pairs": 2,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "case_id": "pdf-format",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 502,
+            "verification_pairs": 3,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "txt-format",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 610,
+            "verification_pairs": 3,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 8,
+                "line_end": 8
+              },
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 1,
+                "line_end": 1
+              }
+            ]
+          },
+          {
+            "case_id": "md-format",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 461,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "retention",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 404,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-retention",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 409,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "delete-time",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 496,
+            "verification_pairs": 2,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 7,
+                "line_end": 7
+              },
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "encryption",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 263,
+            "verification_pairs": 0,
+            "citations": []
+          },
+          {
+            "case_id": "team-seats",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 60,
+            "verification_pairs": 0,
+            "citations": []
+          },
+          {
+            "case_id": "refunds",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 63,
+            "verification_pairs": 0,
+            "citations": []
+          },
+          {
+            "case_id": "region",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 76,
+            "verification_pairs": 0,
+            "citations": []
+          }
+        ]
+      },
+      "corrective": {
+        "case_count": 16,
+        "fixture_agreement": 0.875,
+        "macro_f1": 0.8857142857142857,
+        "per_class": {
+          "supported": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 8
+          },
+          "contradicted": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "insufficient_evidence": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 4
+          }
+        },
+        "confusion": {
+          "supported": {
+            "supported": 6,
+            "contradicted": 0,
+            "insufficient_evidence": 2
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 4,
+            "insufficient_evidence": 0
+          },
+          "insufficient_evidence": {
+            "supported": 0,
+            "contradicted": 0,
+            "insufficient_evidence": 4
+          }
+        },
+        "retrieval_hit_rate": 1.0,
+        "recall_at5": 1.0,
+        "mrr_at5": 1.0,
+        "retrieval_metric_note": "First-round unique chunks; each annotated case has one expected source span. Missing-evidence cases excluded.",
+        "p50_ms": 387.0,
+        "p95_ms": 464.5,
+        "total_seconds": 5.54,
+        "cases": [
+          {
+            "case_id": "basic-price",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 279,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "case_id": "pro-price",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 404,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-pro",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 391,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-basic",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 406,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d1-plans.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "case_id": "max-upload",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 407,
+            "verification_pairs": 2,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-upload",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 452,
+            "verification_pairs": 2,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "case_id": "pdf-format",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 458,
+            "verification_pairs": 3,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "txt-format",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 484,
+            "verification_pairs": 3,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 8,
+                "line_end": 8
+              },
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 1,
+                "line_end": 1
+              }
+            ]
+          },
+          {
+            "case_id": "md-format",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 413,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d2-uploads.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "retention",
+            "expected": "supported",
+            "predicted": "supported",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 381,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "wrong-retention",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "agreement": true,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 334,
+            "verification_pairs": 1,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "delete-time",
+            "expected": "supported",
+            "predicted": "insufficient_evidence",
+            "agreement": false,
+            "retrieval_hit": true,
+            "first_relevant_rank_at5": 1,
+            "extracted_claim_count": 1,
+            "latency_ms": 383,
+            "verification_pairs": 2,
+            "citations": [
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 7,
+                "line_end": 7
+              },
+              {
+                "document_name": "d3-retention.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "case_id": "encryption",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 310,
+            "verification_pairs": 0,
+            "citations": []
+          },
+          {
+            "case_id": "team-seats",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 213,
+            "verification_pairs": 0,
+            "citations": []
+          },
+          {
+            "case_id": "refunds",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 120,
+            "verification_pairs": 0,
+            "citations": []
+          },
+          {
+            "case_id": "region",
+            "expected": "insufficient_evidence",
+            "predicted": "insufficient_evidence",
+            "agreement": true,
+            "retrieval_hit": null,
+            "first_relevant_rank_at5": null,
+            "extracted_claim_count": 1,
+            "latency_ms": 106,
+            "verification_pairs": 0,
+            "citations": []
+          }
+        ]
+      }
+    }
+  }
+}

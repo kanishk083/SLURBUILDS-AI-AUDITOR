@@ -1,0 +1,70 @@
+name: ai-auditor
+services:
+  postgres:
+    restart: unless-stopped
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: auditor
+      POSTGRES_USER: auditor
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-auditor_local}
+    ports: ["127.0.0.1:55432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U auditor -d auditor"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    restart: unless-stopped
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    ports: ["127.0.0.1:56379:6379"]
+    volumes: [redisdata:/data]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  api:
+    profiles: [app]
+    build: {context: ., dockerfile: backend/Dockerfile}
+    command: ["sh", "-c", "alembic upgrade head && uvicorn backend.api:app --host 0.0.0.0 --port 8000"]
+    ports: ["127.0.0.1:8000:8000"]
+    environment: &appenv
+      DATABASE_URL: postgresql+asyncpg://auditor:${POSTGRES_PASSWORD:-auditor_local}@postgres:5432/auditor
+      REDIS_URL: redis://redis:6379/0
+      DATA_DIR: /data
+      HF_HOME: /models
+      DEMO_ENABLED: "${DEMO_ENABLED:-true}"
+      COOKIE_SECURE: "${COOKIE_SECURE:-false}"
+      AUDIT_PROVIDER: "${AUDIT_PROVIDER:-local_nli}"
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY:-}"
+      ANTHROPIC_BASE_URL: "${ANTHROPIC_BASE_URL:-https://api.anthropic.com}"
+      ANTHROPIC_MODEL: "${ANTHROPIC_MODEL:-}"
+    volumes: [appdata:/data, models:/models]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready',timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+  worker:
+    profiles: [app]
+    build: {context: ., dockerfile: backend/Dockerfile}
+    command: ["arq", "backend.worker.WorkerSettings"]
+    environment: *appenv
+    volumes: [appdata:/data, models:/models]
+    depends_on: {api: {condition: service_healthy}}
+  web:
+    profiles: [app]
+    build: {context: ./frontend}
+    ports: ["127.0.0.1:3000:3000"]
+    environment: {API_INTERNAL_URL: "http://api:8000"}
+    depends_on: {api: {condition: service_healthy}}
+volumes:
+  pgdata:
+  redisdata:
+  appdata:
+  models:

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-25",
+  "backend_tests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "frontend_build": "passed",
+  "chrome_workflow": "passed",
+  "compose_config": "passed",
+  "core_runtime": "native Python/Node with Docker PostgreSQL/Redis",
+  "pipeline_version": "hybrid-ablation-v2",
+  "hosted_adapter": "authentication_probe_failed",
+  "full_app_container_build": "unverified_disk_exhaustion",
+  "visual_adapter": "unverified",
+  "fixture_labels_human_reviewed": false
+}

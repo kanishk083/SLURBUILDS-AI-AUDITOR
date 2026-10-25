@@ -1,0 +1,86 @@
+{
+  "case_id": "phase00-demo-001",
+  "corpus_version": "synthetic-v1",
+  "purpose": "Manual learning fixture; no learner answers or benchmark scores recorded.",
+  "question": "Summarize Demo App's plan prices, upload limit, supported formats, file encryption, and team-member limits.",
+  "original_answer": "The Basic plan costs INR 199 per month.\nThe Pro plan costs INR 299 per month.\nThe maximum size of one uploaded file is 50 MB.\nPDF uploads are supported.\nAll stored files are encrypted with AES-256.\nEvery account can have unlimited team members.",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "The Basic plan costs INR 199 per month.",
+      "answer_span": {
+        "start": 0,
+        "end": 39,
+        "unit": "unicode_code_points",
+        "end_exclusive": true
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "The Pro plan costs INR 299 per month.",
+      "answer_span": {
+        "start": 40,
+        "end": 77,
+        "unit": "unicode_code_points",
+        "end_exclusive": true
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "The maximum size of one uploaded file is 50 MB.",
+      "answer_span": {
+        "start": 78,
+        "end": 125,
+        "unit": "unicode_code_points",
+        "end_exclusive": true
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "PDF uploads are supported.",
+      "answer_span": {
+        "start": 126,
+        "end": 152,
+        "unit": "unicode_code_points",
+        "end_exclusive": true
+      }
+    },
+    {
+      "claim_id": "C5",
+      "text": "All stored files are encrypted with AES-256.",
+      "answer_span": {
+        "start": 153,
+        "end": 197,
+        "unit": "unicode_code_points",
+        "end_exclusive": true
+      }
+    },
+    {
+      "claim_id": "C6",
+      "text": "Every account can have unlimited team members.",
+      "answer_span": {
+        "start": 198,
+        "end": 244,
+        "unit": "unicode_code_points",
+        "end_exclusive": true
+      }
+    }
+  ],
+  "sources": [
+    {
+      "document_id": "D1",
+      "version": "1",
+      "path": "sources/d1-plans.md"
+    },
+    {
+      "document_id": "D2",
+      "version": "1",
+      "path": "sources/d2-uploads.md"
+    },
+    {
+      "document_id": "D3",
+      "version": "1",
+      "path": "sources/d3-retention.md"
+    }
+  ]
+}

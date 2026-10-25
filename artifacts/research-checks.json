@@ -1,0 +1,1902 @@
+{
+  "runtime": "local CPU",
+  "labs": {
+    "late_pooling": {
+      "status": "executed",
+      "elapsed_s": 14.94,
+      "result": {
+        "method": "Context-window late-pooling mechanism lab",
+        "model_context_limited": true,
+        "source_ids": [
+          "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+          "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+          "caf53c38-52c2-47a1-8dce-442d1ffdfd2d"
+        ],
+        "early_late_cosine": [
+          0.8635209562572339,
+          0.6840290485406387,
+          0.8544046938821401
+        ]
+      }
+    },
+    "late_interaction": {
+      "status": "executed",
+      "elapsed_s": 0.17,
+      "result": {
+        "method": "MiniLM MaxSim mechanism lab",
+        "not_exact_reproduction": "ColBERT",
+        "results": [
+          {
+            "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+            "text": "The Basic plan costs INR 199 per month.\nThe Pro plan costs INR 499 per month.",
+            "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+            "score": 0.8945664167404175
+          },
+          {
+            "id": "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+            "text": "# D1 - Demo App Plans",
+            "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+            "score": 0.278413325548172
+          },
+          {
+            "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+            "text": "Document ID: D1\nVersion: 1\nSynthetic exercise material; not a real service or price list.",
+            "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+            "score": 0.2604897618293762
+          },
+          {
+            "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+            "text": "Document ID: D3\nVersion: 1\nSynthetic exercise material; not a real retention policy.",
+            "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+            "score": 0.19628222286701202
+          },
+          {
+            "id": "92c36033-1a19-4cca-8f55-74c604021181",
+            "text": "# D3 - Demo App Retention",
+            "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+            "score": 0.17853596806526184
+          }
+        ]
+      }
+    },
+    "hierarchy": {
+      "status": "executed",
+      "elapsed_s": 0.37,
+      "result": {
+        "nodes": [
+          {
+            "id": "group-0",
+            "summary": "Document ID: D2\nVersion: 1\nSynthetic exercise material; not a real service specification. Document ID: D1\nVersion: 1\nSynthetic exercise material; not a real service or price list.",
+            "source_ids": [
+              "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "6579ca7e-28c6-4e31-815e-85227621b74c"
+            ],
+            "generated": false
+          },
+          {
+            "id": "group-1",
+            "summary": "# D1 - Demo App Plans # D3 - Demo App Retention",
+            "source_ids": [
+              "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "92c36033-1a19-4cca-8f55-74c604021181",
+              "180ce121-2c8f-4334-8894-e704a72170c6"
+            ],
+            "generated": false
+          },
+          {
+            "id": "group-2",
+            "summary": "The maximum size of one uploaded file is 20 MB.\nSupported upload formats are PDF, TXT, and Markdown. Deleted files are removed from active storage within 24 hours.\nBackup copies of deleted files are retained for 30 days.",
+            "source_ids": [
+              "9c12eda0-51fd-45eb-8a9a-c4a22d71c723",
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ],
+            "generated": false
+          }
+        ],
+        "method": "extractive_cluster_tree",
+        "note": "Mechanism lab inspired by hierarchical retrieval; not an exact RAPTOR reproduction."
+      }
+    },
+    "graph": {
+      "status": "executed",
+      "elapsed_s": 0.01,
+      "result": {
+        "nodes": [
+          {
+            "entity": "Demo App Plans",
+            "source_ids": [
+              "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8"
+            ]
+          },
+          {
+            "entity": "ID",
+            "source_ids": [
+              "6579ca7e-28c6-4e31-815e-85227621b74c",
+              "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "f16eb396-60e3-42d8-b4cc-5112a71fc83d"
+            ]
+          },
+          {
+            "entity": "INR",
+            "source_ids": [
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d"
+            ]
+          },
+          {
+            "entity": "The Basic",
+            "source_ids": [
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d"
+            ]
+          },
+          {
+            "entity": "The Pro",
+            "source_ids": [
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d"
+            ]
+          },
+          {
+            "entity": "Demo App Retention",
+            "source_ids": [
+              "92c36033-1a19-4cca-8f55-74c604021181"
+            ]
+          },
+          {
+            "entity": "Backup",
+            "source_ids": [
+              "9c12eda0-51fd-45eb-8a9a-c4a22d71c723"
+            ]
+          },
+          {
+            "entity": "Deleted",
+            "source_ids": [
+              "9c12eda0-51fd-45eb-8a9a-c4a22d71c723"
+            ]
+          },
+          {
+            "entity": "Demo App Uploads",
+            "source_ids": [
+              "180ce121-2c8f-4334-8894-e704a72170c6"
+            ]
+          },
+          {
+            "entity": "MB",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "entity": "Markdown",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "entity": "PDF",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "entity": "Supported",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "entity": "TXT",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "a": "INR",
+            "b": "The Basic",
+            "source_ids": [
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d"
+            ]
+          },
+          {
+            "a": "INR",
+            "b": "The Pro",
+            "source_ids": [
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d"
+            ]
+          },
+          {
+            "a": "The Basic",
+            "b": "The Pro",
+            "source_ids": [
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d"
+            ]
+          },
+          {
+            "a": "Backup",
+            "b": "Deleted",
+            "source_ids": [
+              "9c12eda0-51fd-45eb-8a9a-c4a22d71c723"
+            ]
+          },
+          {
+            "a": "MB",
+            "b": "Markdown",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "MB",
+            "b": "PDF",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "MB",
+            "b": "Supported",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "MB",
+            "b": "TXT",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "Markdown",
+            "b": "PDF",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "Markdown",
+            "b": "Supported",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "Markdown",
+            "b": "TXT",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "PDF",
+            "b": "Supported",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "PDF",
+            "b": "TXT",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          },
+          {
+            "a": "Supported",
+            "b": "TXT",
+            "source_ids": [
+              "e6a0175d-4687-490a-8d32-5ba26e420c68"
+            ]
+          }
+        ],
+        "note": "Rule-based entity co-occurrence lab; not Microsoft's GraphRAG pipeline.",
+        "expanded_source_ids": [
+          "caf53c38-52c2-47a1-8dce-442d1ffdfd2d"
+        ]
+      }
+    },
+    "hnsw": {
+      "status": "executed",
+      "elapsed_s": 0.05,
+      "result": {
+        "method": "Exact vs indexed query-plan experiment",
+        "results": [
+          {
+            "query": "The Pro plan costs INR 299 per month.",
+            "exact_ids": [
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "92c36033-1a19-4cca-8f55-74c604021181",
+              "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "a3c3c77a-bc11-4c53-883c-dadeba28011c"
+            ],
+            "candidate_ids": [
+              "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "92c36033-1a19-4cca-8f55-74c604021181",
+              "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "a3c3c77a-bc11-4c53-883c-dadeba28011c"
+            ],
+            "neighbor_recall": 1.0,
+            "exact_ms": 4.953899886459112,
+            "indexed_ms": 2.841699868440628,
+            "plan": [
+              {
+                "Plan": {
+                  "Node Type": "Limit",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 8.17,
+                  "Total Cost": 8.17,
+                  "Plan Rows": 1,
+                  "Plan Width": 98,
+                  "Plans": [
+                    {
+                      "Node Type": "Sort",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Startup Cost": 8.17,
+                      "Total Cost": 8.17,
+                      "Plan Rows": 1,
+                      "Plan Width": 98,
+                      "Sort Key": [
+                        "((embedding <=> '[-0.004847541,0.008884029,-0.073766805,-0.061442558,0.049011137,0.029317148,0.004198121,0.14337316,0.025560126,0.051138125,0.036317397,0.0037037232,0.0019116903,-0.052256454,0.049949903,-0.023204993,0.03579465,-0.09626228,0.059698872,0.016286245,-0.03106977,-0.058134336,0.015576582,0.044123657,0.054252528,-0.024449931,0.053454347,0.096059464,0.030377315,0.021524979,0.08461676,0.053047355,0.007960134,-0.025531054,0.076281816,-0.003849979,-0.12111694,0.018904092,-0.06285376,-0.038860597,0.0033523054,0.014206283,-0.14288525,-0.0076487684,-0.007939754,0.020524895,-0.049391035,0.082298875,0.031231446,0.12563238,0.05469329,0.017846016,-0.043242704,-0.022327198,-0.058632202,-0.05739554,0.0028218308,-0.022095554,0.027839068,0.055568207,-0.04873805,-0.08297818,-0.08513027,0.025639974,-0.014526813,0.038083576,0.020450529,0.010051935,0.00065672206,-0.025678402,-0.077840485,-0.012743171,0.02950767,0.0394504,0.03753131,0.03392667,0.070247896,-0.00041085746,0.02074983,-0.008489703,-0.044930566,0.047827046,-0.049436897,-0.02442606,0.085967764,-0.064735845,0.0670743,-0.025636027,0.025115047,-0.047721606,0.051635485,0.02929737,-0.048275776,-0.020541675,-0.116603665,0.01291977,-0.08354247,-0.10226267,-0.0015070636,0.01125007,-0.013071902,-0.041865118,0.046054758,-0.035297092,-0.04223047,-0.06760629,0.005894595,0.071539514,0.05418014,0.10949893,-0.008098622,-0.08474102,0.053051155,0.0048442488,0.0055765435,0.08038802,-0.06092793,-0.021734448,0.18255672,0.02353036,0.009666804,0.011128585,-0.023913298,-0.035407558,-0.114938565,-0.022340136,0.014176574,-1.2998591e-33,-0.041241627,0.06613005,-0.021524895,-0.09741294,0.009824251,0.019664492,0.056276694,0.06603715,0.021408735,-0.020326605,-0.0603454,-0.070454165,0.0339322,0.031964727,0.023455717,-0.121217445,0.0077201757,0.06798755,-0.0054446375,0.04952718,-0.018466817,-0.03565531,0.07864292,-0.053390697,0.055902548,0.026915893,0.045418423,0.027817443,0.062509134,0.019941885,-0.014044581,0.048363343,0.0075781625,0.017316077,0.07184853,0.093088984,0.025468176,-0.062785216,-0.014247154,0.028022975,-0.037405793,0.037020005,0.026544075,-0.04208947,0.00941371,-0.030727783,0.039471652,0.020430544,0.026083158,-0.016253078,-0.064592324,0.007379657,-0.0774772,-0.011662092,-0.0170877,-0.009086571,-0.013472862,-0.033820458,0.07192267,0.016122703,-0.009186893,-0.051032815,0.014400469,0.060184345,-0.023689566,-0.010631633,-0.05388219,0.036287602,-0.023152813,0.045173448,-0.0676716,0.03431358,0.138425,-0.0693239,-0.10616338,0.06695053,0.01222232,0.02671809,-0.014556637,0.028579256,-0.054200925,0.05465254,-0.008858771,0.019573981,0.039154295,0.03932752,0.064443275,0.09033447,-0.040755156,0.048095725,0.03989662,0.02417253,-0.034415185,0.047504924,0.020383162,8.127068e-34,-0.047671963,0.057768434,0.09100233,0.026994566,0.019391445,-0.030562352,0.007969181,0.038257416,0.012040048,0.0599436,-0.04441478,0.00848851,0.013904974,0.028502231,-0.0025789863,-0.014878474,-0.044895615,-0.048385497,-0.015373302,-0.0049159536,0.013947988,0.066185445,-0.020136608,0.000647362,-0.055748507,0.028445737,0.017893769,0.06838438,0.0088682575,-0.0056771133,-0.023780026,-0.02098059,-0.12717408,-0.014469253,-0.046996113,-0.014371577,0.0074474867,0.060019825,0.029404564,0.047114976,0.06868177,-0.059148997,-0.032553215,0.0021706168,0.036623478,-0.022476422,0.08106535,-0.11598389,0.03879215,-0.020587437,-0.038002316,-0.05119239,-0.002376347,-0.012043662,-0.069298394,-0.04623984,0.0557376,-0.04015587,-0.021854527,-0.08184132,0.060568336,0.09201511,0.035742145,0.008490341,-0.008260964,0.019050246,0.010753217,-0.09282756,0.08397187,0.010204569,-0.050743897,-0.027311066,-0.075913996,-0.09515805,-0.060587406,0.024225932,0.0069545717,0.01115177,0.00402211,0.018469928,-0.04859929,-0.044364322,-0.040512614,0.006837014,-0.020725965,-0.02497525,-0.081254184,-0.01611845,-0.04408405,0.08130515,-0.08295893,0.015575656,-0.0037502279,0.01873254,-0.011894658,-1.7114834e-08,0.046469536,0.044244077,0.0821437,0.0137634445,0.04582209,-0.10731901,0.037063036,-0.023019552,-0.0007844516,0.07311628,0.039908696,-0.00800557,-0.02437012,-0.06377347,-0.05413089,0.058691937,0.045834243,0.049412947,-0.056510955,-0.0026898142,-0.054367214,0.026424648,-0.02470273,0.021787887,-0.03245079,0.032637425,-0.00641924,0.17860235,0.032055426,0.0026703319,-0.03400049,-0.0023746802,0.03050689,-0.053717736,0.0014406312,-0.06982808,-0.021439055,0.04645152,0.02014504,-0.008624607,0.03808286,-0.054919396,-0.029968409,0.0072752438,-0.011312793,0.06233554,-0.123719685,-0.089906804,-0.00837811,0.033136416,-0.043406114,0.06880942,0.024393413,0.063170046,-0.011428993,0.033439867,-0.03941626,-0.06456717,-0.108776666,0.04451311,0.0053361445,-0.09521167,0.02876102,-0.050208073]'::vector))"
+                      ],
+                      "Plans": [
+                        {
+                          "Node Type": "Index Scan",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Scan Direction": "Forward",
+                          "Index Name": "ix_chunks_kb_id",
+                          "Relation Name": "chunks",
+                          "Alias": "chunks",
+                          "Startup Cost": 0.14,
+                          "Total Cost": 8.16,
+                          "Plan Rows": 1,
+                          "Plan Width": 98,
+                          "Index Cond": "((kb_id)::text = '731782e6-4262-4a23-9362-409a6cea4dea'::text)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "note": "Inspect plan: planner may use a non-HNSW index on small filtered corpora."
+          }
+        ]
+      }
+    }
+  },
+  "modes": {
+    "contextual": {
+      "status": "executed",
+      "elapsed_s": 2.93,
+      "verdict": "contradicted",
+      "trace": [
+        {
+          "step": "evaluate",
+          "round": 0,
+          "query": "The Pro plan costs INR 299 per month.",
+          "retrieval_mode": "contextual",
+          "candidate_count": 12,
+          "accepted_count": 1,
+          "verdict": "contradicted",
+          "candidates": [
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Basic plan costs INR 199 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 7,
+              "line_end": 7,
+              "score": 0.75086,
+              "channel": "contextual",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.75086,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.12,
+              "accepted": false
+            },
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Pro plan costs INR 499 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 8,
+              "line_end": 8,
+              "score": 0.75086,
+              "channel": "contextual",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.75086,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 1.0,
+              "accepted": true,
+              "model_scores": {
+                "contradiction": 0.9972684383392334,
+                "entailment": 0.0005527473404072225,
+                "neutral": 0.002178919967263937
+              },
+              "relation": "contradicts",
+              "quote": "The Pro plan costs INR 499 per month."
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Document ID: D1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.37214,
+              "channel": "contextual",
+              "fusion": 0.016129032258064516,
+              "dense_score": 0.37214,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0447,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.37214,
+              "channel": "contextual",
+              "fusion": 0.016129032258064516,
+              "dense_score": 0.37214,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0447,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.37214,
+              "channel": "contextual",
+              "fusion": 0.016129032258064516,
+              "dense_score": 0.37214,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0447,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "not a real service or price list.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.37214,
+              "channel": "contextual",
+              "fusion": 0.016129032258064516,
+              "dense_score": 0.37214,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0447,
+              "accepted": false
+            },
+            {
+              "id": "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 0,
+              "text": "# D1 - Demo App Plans",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.34209,
+              "channel": "contextual",
+              "fusion": 0.015873015873015872,
+              "dense_score": 0.34209,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0411,
+              "accepted": false
+            },
+            {
+              "id": "92c36033-1a19-4cca-8f55-74c604021181",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 0,
+              "text": "# D3 - Demo App Retention",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.20698,
+              "channel": "contextual",
+              "fusion": 0.015625,
+              "dense_score": 0.20698,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0248,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Document ID: D3",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.17232,
+              "channel": "contextual",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.17232,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0207,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.17232,
+              "channel": "contextual",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.17232,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0207,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.17232,
+              "channel": "contextual",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.17232,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0207,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "not a real retention policy.",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.17232,
+              "channel": "contextual",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.17232,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0207,
+              "accepted": false
+            }
+          ]
+        }
+      ]
+    },
+    "parent_window": {
+      "status": "executed",
+      "elapsed_s": 0.21,
+      "verdict": "contradicted",
+      "trace": [
+        {
+          "step": "evaluate",
+          "round": 0,
+          "query": "The Pro plan costs INR 299 per month.",
+          "retrieval_mode": "hybrid",
+          "candidate_count": 14,
+          "accepted_count": 1,
+          "verdict": "contradicted",
+          "candidates": [
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Basic plan costs INR 199 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 7,
+              "line_end": 7,
+              "score": 0.89065,
+              "channel": "hybrid",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.89065,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.12,
+              "accepted": false
+            },
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Pro plan costs INR 499 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 8,
+              "line_end": 8,
+              "score": 0.89065,
+              "channel": "hybrid",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.89065,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 1.0,
+              "accepted": true,
+              "model_scores": {
+                "contradiction": 0.9972684383392334,
+                "entailment": 0.0005527473404072225,
+                "neutral": 0.002178919967263937
+              },
+              "relation": "contradicts",
+              "quote": "The Pro plan costs INR 499 per month."
+            },
+            {
+              "id": "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 0,
+              "text": "# D1 - Demo App Plans",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.3165,
+              "channel": "hybrid",
+              "fusion": 0.016129032258064516,
+              "dense_score": 0.3165,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.038,
+              "accepted": false
+            },
+            {
+              "id": "92c36033-1a19-4cca-8f55-74c604021181",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 0,
+              "text": "# D3 - Demo App Retention",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.22176,
+              "channel": "hybrid",
+              "fusion": 0.015873015873015872,
+              "dense_score": 0.22176,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0266,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Document ID: D1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.21602,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.21602,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.21602,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.21602,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.21602,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.21602,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "not a real service or price list.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.21602,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.21602,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Document ID: D3",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "not a real retention policy.",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "9c12eda0-51fd-45eb-8a9a-c4a22d71c723",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 2,
+              "text": "Deleted files are removed from active storage within 24 hours.",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 7,
+              "line_end": 7,
+              "score": 0.13572,
+              "channel": "parent_window",
+              "strip_index": 0,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "9c12eda0-51fd-45eb-8a9a-c4a22d71c723",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 2,
+              "text": "Backup copies of deleted files are retained for 30 days.",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 8,
+              "line_end": 8,
+              "score": 0.13572,
+              "channel": "parent_window",
+              "strip_index": 1,
+              "relevance": 0.0163,
+              "accepted": false
+            }
+          ]
+        }
+      ]
+    },
+    "multi_query": {
+      "status": "executed",
+      "elapsed_s": 0.22,
+      "verdict": "contradicted",
+      "trace": [
+        {
+          "step": "evaluate",
+          "round": 0,
+          "query": "The Pro plan costs INR 299 per month.",
+          "retrieval_mode": "hybrid",
+          "candidate_count": 13,
+          "accepted_count": 1,
+          "verdict": "contradicted",
+          "candidates": [
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Basic plan costs INR 199 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 7,
+              "line_end": 7,
+              "score": 0.83489,
+              "channel": "hybrid",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.83489,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.12,
+              "accepted": false
+            },
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Pro plan costs INR 499 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 8,
+              "line_end": 8,
+              "score": 0.83489,
+              "channel": "hybrid",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.83489,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 1.0,
+              "accepted": true,
+              "model_scores": {
+                "contradiction": 0.9972684383392334,
+                "entailment": 0.0005527473404072225,
+                "neutral": 0.002178919967263937
+              },
+              "relation": "contradicts",
+              "quote": "The Pro plan costs INR 499 per month."
+            },
+            {
+              "id": "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 0,
+              "text": "# D1 - Demo App Plans",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.29043,
+              "channel": "hybrid",
+              "fusion": 0.016129032258064516,
+              "dense_score": 0.29043,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0349,
+              "accepted": false
+            },
+            {
+              "id": "92c36033-1a19-4cca-8f55-74c604021181",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 0,
+              "text": "# D3 - Demo App Retention",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.18001,
+              "channel": "hybrid",
+              "fusion": 0.015873015873015872,
+              "dense_score": 0.18001,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0216,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Document ID: D1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.17834,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.17834,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0214,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.17834,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.17834,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0214,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.17834,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.17834,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0214,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "not a real service or price list.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.17834,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.17834,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0214,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Document ID: D3",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "not a real retention policy.",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "180ce121-2c8f-4334-8894-e704a72170c6",
+              "document_id": "f5785205-527b-4e8b-9d94-095ce1746fad",
+              "document_name": "d2-uploads.md",
+              "ordinal": 0,
+              "text": "# D2 - Demo App Uploads",
+              "context": "D2 - Demo App Uploads",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.09302,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.09302,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0112,
+              "accepted": false
+            }
+          ]
+        }
+      ]
+    },
+    "hyde": {
+      "status": "executed",
+      "elapsed_s": 2.09,
+      "verdict": "contradicted",
+      "trace": [
+        {
+          "step": "hypothetical_search_aid",
+          "text": "The Pro plan costs INR 299 per month .",
+          "is_evidence": false,
+          "round": 0
+        },
+        {
+          "step": "evaluate",
+          "round": 0,
+          "query": "The Pro plan costs INR 299 per month .",
+          "retrieval_mode": "hybrid",
+          "candidate_count": 12,
+          "accepted_count": 1,
+          "verdict": "contradicted",
+          "candidates": [
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Basic plan costs INR 199 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 7,
+              "line_end": 7,
+              "score": 0.89065,
+              "channel": "hybrid",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.89065,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.12,
+              "accepted": false
+            },
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Pro plan costs INR 499 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 8,
+              "line_end": 8,
+              "score": 0.89065,
+              "channel": "hybrid",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.89065,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 1.0,
+              "accepted": true,
+              "model_scores": {
+                "contradiction": 0.9972684383392334,
+                "entailment": 0.0005527473404072225,
+                "neutral": 0.002178919967263937
+              },
+              "relation": "contradicts",
+              "quote": "The Pro plan costs INR 499 per month."
+            },
+            {
+              "id": "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 0,
+              "text": "# D1 - Demo App Plans",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.3165,
+              "channel": "hybrid",
+              "fusion": 0.016129032258064516,
+              "dense_score": 0.3165,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.038,
+              "accepted": false
+            },
+            {
+              "id": "92c36033-1a19-4cca-8f55-74c604021181",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 0,
+              "text": "# D3 - Demo App Retention",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.22176,
+              "channel": "hybrid",
+              "fusion": 0.015873015873015872,
+              "dense_score": 0.22176,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0266,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Document ID: D1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.21602,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.21602,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.21602,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.21602,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.21602,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.21602,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "not a real service or price list.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.21602,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.21602,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Document ID: D3",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "not a real retention policy.",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.13572,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.13572,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0163,
+              "accepted": false
+            }
+          ]
+        }
+      ]
+    },
+    "adaptive": {
+      "status": "executed",
+      "elapsed_s": 0.18,
+      "verdict": "contradicted",
+      "trace": [
+        {
+          "step": "evaluate",
+          "round": 0,
+          "query": "The Pro plan costs INR 299 per month.",
+          "retrieval_mode": "lexical",
+          "candidate_count": 0,
+          "accepted_count": 0,
+          "verdict": "insufficient_evidence",
+          "candidates": []
+        },
+        {
+          "step": "rewrite",
+          "round": 1,
+          "from": "The Pro plan costs INR 299 per month.",
+          "to": "pro plan costs inr month price pricing fee",
+          "reason": "no_decisive_evidence"
+        },
+        {
+          "step": "evaluate",
+          "round": 1,
+          "query": "pro plan costs inr month price pricing fee",
+          "retrieval_mode": "hybrid",
+          "candidate_count": 9,
+          "accepted_count": 1,
+          "verdict": "contradicted",
+          "candidates": [
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Basic plan costs INR 199 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 7,
+              "line_end": 7,
+              "score": 0.83489,
+              "channel": "hybrid",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.83489,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.12,
+              "accepted": false
+            },
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Pro plan costs INR 499 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 8,
+              "line_end": 8,
+              "score": 0.83489,
+              "channel": "hybrid",
+              "fusion": 0.01639344262295082,
+              "dense_score": 0.83489,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 1.0,
+              "accepted": true,
+              "model_scores": {
+                "contradiction": 0.9972684383392334,
+                "entailment": 0.0005527473404072225,
+                "neutral": 0.002178919967263937
+              },
+              "relation": "contradicts",
+              "quote": "The Pro plan costs INR 499 per month."
+            },
+            {
+              "id": "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 0,
+              "text": "# D1 - Demo App Plans",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.29043,
+              "channel": "hybrid",
+              "fusion": 0.016129032258064516,
+              "dense_score": 0.29043,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0349,
+              "accepted": false
+            },
+            {
+              "id": "92c36033-1a19-4cca-8f55-74c604021181",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 0,
+              "text": "# D3 - Demo App Retention",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.18001,
+              "channel": "hybrid",
+              "fusion": 0.015873015873015872,
+              "dense_score": 0.18001,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0216,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Document ID: D1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.17834,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.17834,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0214,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.17834,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.17834,
+              "lexical_score": 0.0,
+              "strip_index": 1,
+              "relevance": 0.0214,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.17834,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.17834,
+              "lexical_score": 0.0,
+              "strip_index": 2,
+              "relevance": 0.0214,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "not a real service or price list.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.17834,
+              "channel": "hybrid",
+              "fusion": 0.015625,
+              "dense_score": 0.17834,
+              "lexical_score": 0.0,
+              "strip_index": 3,
+              "relevance": 0.0214,
+              "accepted": false
+            },
+            {
+              "id": "180ce121-2c8f-4334-8894-e704a72170c6",
+              "document_id": "f5785205-527b-4e8b-9d94-095ce1746fad",
+              "document_name": "d2-uploads.md",
+              "ordinal": 0,
+              "text": "# D2 - Demo App Uploads",
+              "context": "D2 - Demo App Uploads",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.09302,
+              "channel": "hybrid",
+              "fusion": 0.015384615384615385,
+              "dense_score": 0.09302,
+              "lexical_score": 0.0,
+              "strip_index": 0,
+              "relevance": 0.0112,
+              "accepted": false
+            }
+          ]
+        }
+      ]
+    },
+    "agentic": {
+      "status": "executed",
+      "elapsed_s": 0.77,
+      "verdict": "contradicted",
+      "trace": [
+        {
+          "step": "agent_tool",
+          "round": 0,
+          "tool": "keyword_search",
+          "planner_output": "The Pro plan costs INR 299 per month.",
+          "policy": "validated_policy_fallback",
+          "query": "The Pro plan costs INR 299 per month.",
+          "candidate_count": 0
+        },
+        {
+          "step": "agent_tool",
+          "round": 1,
+          "tool": "semantic_search",
+          "planner_output": "The Pro plan costs INR 299 per month.",
+          "policy": "validated_policy_fallback",
+          "query": "The Pro plan costs INR 299 per month.",
+          "candidate_count": 5
+        },
+        {
+          "step": "agent_tool",
+          "round": 2,
+          "tool": "read_chunk",
+          "source_id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+          "authorized_scope": "731782e6-4262-4a23-9362-409a6cea4dea"
+        },
+        {
+          "step": "evaluate",
+          "round": 0,
+          "query": "The Pro plan costs INR 299 per month.",
+          "retrieval_mode": "hybrid",
+          "candidate_count": 12,
+          "accepted_count": 1,
+          "verdict": "contradicted",
+          "candidates": [
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Basic plan costs INR 199 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 7,
+              "line_end": 7,
+              "score": 0.89065,
+              "channel": "dense",
+              "strip_index": 0,
+              "relevance": 0.12,
+              "accepted": false
+            },
+            {
+              "id": "caf53c38-52c2-47a1-8dce-442d1ffdfd2d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 2,
+              "text": "The Pro plan costs INR 499 per month.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 8,
+              "line_end": 8,
+              "score": 0.89065,
+              "channel": "dense",
+              "strip_index": 1,
+              "relevance": 1.0,
+              "accepted": true,
+              "model_scores": {
+                "contradiction": 0.9972684383392334,
+                "entailment": 0.0005527473404072225,
+                "neutral": 0.002178919967263937
+              },
+              "relation": "contradicts",
+              "quote": "The Pro plan costs INR 499 per month."
+            },
+            {
+              "id": "f1c9d2d6-a5b3-49ee-8217-bac4b69ea0d8",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 0,
+              "text": "# D1 - Demo App Plans",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.3165,
+              "channel": "dense",
+              "strip_index": 0,
+              "relevance": 0.038,
+              "accepted": false
+            },
+            {
+              "id": "92c36033-1a19-4cca-8f55-74c604021181",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 0,
+              "text": "# D3 - Demo App Retention",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 1,
+              "line_end": 1,
+              "score": 0.22176,
+              "channel": "dense",
+              "strip_index": 0,
+              "relevance": 0.0266,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Document ID: D1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.21602,
+              "channel": "dense",
+              "strip_index": 0,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.21602,
+              "channel": "dense",
+              "strip_index": 1,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.21602,
+              "channel": "dense",
+              "strip_index": 2,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "f16eb396-60e3-42d8-b4cc-5112a71fc83d",
+              "document_id": "8c4cb5d0-9651-4326-8095-96822a87bb9d",
+              "document_name": "d1-plans.md",
+              "ordinal": 1,
+              "text": "not a real service or price list.",
+              "context": "D1 - Demo App Plans",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.21602,
+              "channel": "dense",
+              "strip_index": 3,
+              "relevance": 0.0259,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Document ID: D3",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "score": 0.13572,
+              "channel": "dense",
+              "strip_index": 0,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Version: 1",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 4,
+              "line_end": 4,
+              "score": 0.13572,
+              "channel": "dense",
+              "strip_index": 1,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "Synthetic exercise material",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.13572,
+              "channel": "dense",
+              "strip_index": 2,
+              "relevance": 0.0163,
+              "accepted": false
+            },
+            {
+              "id": "a3c3c77a-bc11-4c53-883c-dadeba28011c",
+              "document_id": "a8e65e12-a6b7-4369-ab9c-20f0e2eba09b",
+              "document_name": "d3-retention.md",
+              "ordinal": 1,
+              "text": "not a real retention policy.",
+              "context": "D3 - Demo App Retention",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "score": 0.13572,
+              "channel": "dense",
+              "strip_index": 3,
+              "relevance": 0.0163,
+              "accepted": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

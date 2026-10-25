@@ -1,0 +1,76 @@
+{
+  "case_id": "phase00-demo-001",
+  "label_source": "assistant_authored_reference_key",
+  "review_status": "provisional_until_human_review",
+  "notice": "Teaching reference, not learner work or an independently human-validated golden dataset. Attempt the worksheet before consulting this file.",
+  "labels": [
+    {
+      "claim_id": "C1",
+      "intended_verdict": "supported",
+      "evidence": [
+        {
+          "document_id": "D1",
+          "version": "1",
+          "line": 7,
+          "relation": "supports",
+          "quote": "The Basic plan costs INR 199 per month."
+        }
+      ],
+      "rationale": "Same plan, amount, currency and monthly period."
+    },
+    {
+      "claim_id": "C2",
+      "intended_verdict": "contradicted",
+      "evidence": [
+        {
+          "document_id": "D1",
+          "version": "1",
+          "line": 8,
+          "relation": "contradicts",
+          "quote": "The Pro plan costs INR 499 per month."
+        }
+      ],
+      "rationale": "Same plan and period, but reference price is INR 499 while the audited answer states INR 299."
+    },
+    {
+      "claim_id": "C3",
+      "intended_verdict": "contradicted",
+      "evidence": [
+        {
+          "document_id": "D2",
+          "version": "1",
+          "line": 7,
+          "relation": "contradicts",
+          "quote": "The maximum size of one uploaded file is 20 MB."
+        }
+      ],
+      "rationale": "Same per-file maximum, incompatible numeric limit: reference 20 MB versus claim 50 MB."
+    },
+    {
+      "claim_id": "C4",
+      "intended_verdict": "supported",
+      "evidence": [
+        {
+          "document_id": "D2",
+          "version": "1",
+          "line": 8,
+          "relation": "supports",
+          "quote": "Supported upload formats are PDF, TXT, and Markdown."
+        }
+      ],
+      "rationale": "PDF belongs to the explicitly supported set; wording need not be identical."
+    },
+    {
+      "claim_id": "C5",
+      "intended_verdict": "insufficient_evidence",
+      "evidence": [],
+      "rationale": "The complete provided corpus does not state an encryption scheme. Retention/deletion text does not establish encryption or its absence."
+    },
+    {
+      "claim_id": "C6",
+      "intended_verdict": "insufficient_evidence",
+      "evidence": [],
+      "rationale": "No provided source establishes a team-member limit or unlimited membership. Missing support does not prove the claim false."
+    }
+  ]
+}
