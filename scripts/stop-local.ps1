@@ -5,7 +5,7 @@ if (-not (Test-Path -LiteralPath $pidsFile)) { Write-Output 'No recorded local p
 $recorded = Get-Content -LiteralPath $pidsFile -Raw | ConvertFrom-Json
 foreach ($item in $recorded) {
     $taskProcess = Get-Process -Id $item.Id -ErrorAction SilentlyContinue
-    if ($taskProcess -and ($taskProcess.StartTime.ToUniversalTime() - [datetime]$item.Started).Duration().TotalSeconds -lt 2) {
+    if ($taskProcess -and ($taskProcess.StartTime.ToUniversalTime() - ([datetimeoffset]::Parse($item.Started)).UtcDateTime).Duration().TotalSeconds -lt 2) {
         # Stop only the recorded process tree after checking its creation time (avoid PID reuse).
         taskkill.exe /PID $item.Id /T /F | Out-Null
     }
