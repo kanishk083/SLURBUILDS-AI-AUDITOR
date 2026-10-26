@@ -8,7 +8,8 @@ body {
   color: #24314d;
   background: #f5f7fb;
   font-family: "Manrope Variable", "Segoe UI", sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 550;
 }
 button,
 input,
@@ -57,17 +58,17 @@ p {
   margin-top: 0;
 }
 h1 {
-  font-size: 33px;
+  font-size: 2.5rem;
   letter-spacing: -1.25px;
   line-height: 1.2;
-  font-weight: 750;
+  font-weight: 800;
 }
 h2 {
-  font-size: 17px;
+  font-size: 1.375rem;
   letter-spacing: -0.35px;
 }
 h3 {
-  font-size: 16px;
+  font-size: 1.25rem;
 }
 p {
   line-height: 1.75;
@@ -79,7 +80,7 @@ p {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-size: 21px;
+  font-size: 1.5625rem;
   font-weight: 800;
   letter-spacing: -0.75px;
   color: #1b2b51;
@@ -104,8 +105,8 @@ p {
   min-height: 43px;
   padding: 11px 17px;
   border-radius: 8px;
-  font-weight: 700;
-  font-size: 13px;
+  font-weight: 750;
+  font-size: 1.0625rem;
 }
 .primary {
   color: #fff;
@@ -195,12 +196,12 @@ p {
   color: #536eaa;
   border-left: 3px solid #8aa3ea;
   padding-left: 13px;
-  font-size: 13px;
-  font-weight: 650;
+  font-size: 1.0625rem;
+  font-weight: 700;
   margin-bottom: 24px;
 }
 .intro h1 {
-  font-size: clamp(44px, 4.4vw, 68px);
+  font-size: clamp(3rem, 4.8vw, 4.5rem);
   line-height: 1.12;
   letter-spacing: -3px;
   color: #1d2c51;
@@ -208,7 +209,7 @@ p {
 }
 .intro > p {
   color: #687793;
-  font-size: 15px;
+  font-size: 1.1875rem;
   max-width: 420px;
 }
 .sample-claim {
@@ -221,9 +222,9 @@ p {
   box-shadow: 0 14px 36px #34519409;
 }
 .sample-claim p {
-  font-size: 17px;
+  font-size: 1.375rem;
   margin: 16px 0 12px;
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: -0.4px;
 }
 .sample-claim > div {
@@ -231,13 +232,13 @@ p {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 12px;
+  font-size: 1rem;
 }
 .intro-foot {
   display: flex;
   gap: 9px;
   align-items: center;
-  font-size: 11px;
+  font-size: 0.9375rem;
   color: #7486aa;
   flex-wrap: wrap;
 }
@@ -255,7 +256,7 @@ p {
   max-width: 390px;
 }
 .form-wrap h2 {
-  font-size: 25px;
+  font-size: 2rem;
   letter-spacing: -0.9px;
 }
 .segmented {
@@ -271,8 +272,8 @@ p {
   border-radius: 6px;
   background: transparent;
   color: #71809a;
-  font-size: 12px;
-  font-weight: 650;
+  font-size: 1rem;
+  font-weight: 700;
 }
 .segmented .selected {
   background: #fff;
@@ -290,13 +291,13 @@ p {
   margin-bottom: 10px;
 }
 .demo-note p {
-  font-size: 13px;
+  font-size: 1.0625rem;
   color: #7a869a;
 }
 .form-wrap small {
   display: block;
   color: #8b94a5;
-  font-size: 11px;
+  font-size: 0.9375rem;
   line-height: 1.8;
   margin-top: 17px;
 }
@@ -304,7 +305,7 @@ p {
   position: absolute;
   bottom: 24px;
   color: #939db0;
-  font-size: 11px;
+  font-size: 0.9375rem;
 }
 .form-wrap label {
   margin-bottom: 20px;
@@ -317,7 +318,7 @@ p {
   min-height: 100vh;
 }
 .sidebar {
-  width: 250px;
+  width: 272px;
   flex-shrink: 0;
   background: #fff;
   border-right: 1px solid #e6eaf2;
@@ -341,15 +342,15 @@ p {
 .workspace-select > span {
   display: block;
   color: #8a95a9;
-  font-size: 10px;
+  font-size: 0.875rem;
   margin-bottom: 7px;
 }
 .workspace-select select {
   border: 0;
   background: transparent;
   color: #445477;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 750;
   padding: 0;
   width: 100%;
   outline: none;
@@ -370,8 +371,8 @@ p {
   color: #7a879e;
   text-align: left;
   border-radius: 7px;
-  font-size: 12px;
-  font-weight: 650;
+  font-size: 1rem;
+  font-weight: 700;
 }
 .sidebar nav .active {
   background: #edf2ff;
@@ -386,8 +387,8 @@ p {
   align-items: center;
   margin: 23px 9px 14px;
   color: #7b87a0;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 0.9375rem;
+  font-weight: 750;
 }
 .count {
   background: #eef1f7;
@@ -396,7 +397,7 @@ p {
   min-width: 20px;
   text-align: center;
   padding: 2px 5px;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .document-list {
   min-height: 150px;
@@ -425,12 +426,12 @@ p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 11px;
-  font-weight: 650;
+  font-size: 0.9375rem;
+  font-weight: 700;
   color: #60708d;
 }
 .document small {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #9aa5b7;
   display: block;
   margin-top: 5px;
@@ -454,7 +455,7 @@ p {
   padding: 22px 6px;
 }
 .empty-doc p {
-  font-size: 11px;
+  font-size: 0.9375rem;
   margin-top: 12px;
 }
 .upload-button {
@@ -467,14 +468,14 @@ p {
   justify-content: center;
   padding: 12px;
   gap: 9px;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 0.9375rem;
+  font-weight: 750;
 }
 .upload-button:hover {
   background: #eef3ff;
 }
 .upload-hint {
-  font-size: 9px;
+  font-size: 0.8125rem;
   text-align: center;
   color: #5f6f89;
   margin: 10px 0 25px;
@@ -497,7 +498,7 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 11px;
+  font-size: 0.9375rem;
   font-weight: 800;
 }
 .sidebar-footer > div:nth-child(2) {
@@ -505,17 +506,17 @@ p {
   min-width: 0;
 }
 .sidebar-footer strong {
-  font-size: 10px;
+  font-size: 0.875rem;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .sidebar-footer small {
-  font-size: 9px;
+  font-size: 0.8125rem;
   color: #5f6f89;
 }
 .main {
-  margin-left: 250px;
+  margin-left: 272px;
   min-width: 0;
   flex: 1;
   display: flex;
@@ -532,8 +533,8 @@ p {
   gap: 15px;
 }
 .topbar > span {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 750;
   color: #647391;
 }
 .topbar > div {
@@ -541,7 +542,7 @@ p {
   align-items: center;
   gap: 8px;
   color: #8a96ac;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .status-dot {
   height: 6px;
@@ -557,7 +558,7 @@ p {
   border: 1px solid #e3e8f3;
   padding: 5px 8px;
   border-radius: 5px;
-  font-size: 9px;
+  font-size: 0.8125rem;
   color: #8796b1;
 }
 .workspace-content {
@@ -578,12 +579,12 @@ p {
   margin-bottom: 9px;
 }
 .page-intro p {
-  color: #8b96aa;
-  font-size: 12px;
+  color: #62718c;
+  font-size: 1rem;
   margin: 0;
 }
 .page-intro .secondary {
-  font-size: 10px;
+  font-size: 0.875rem;
   min-height: 36px;
   padding: 8px 12px;
 }
@@ -614,7 +615,7 @@ p {
   min-width: 26px;
   background: #edf2fe;
   color: #6280c3;
-  font-size: 10px;
+  font-size: 0.875rem;
   font-weight: 800;
   display: inline-flex;
   justify-content: center;
@@ -622,11 +623,11 @@ p {
   border-radius: 8px;
 }
 .panel-heading h2 {
-  font-size: 13px;
+  font-size: 1.0625rem;
   margin: 1px 0 6px;
 }
 .panel-heading p {
-  font-size: 10px;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: #5f6f89;
   margin: 0;
@@ -640,7 +641,7 @@ p {
   border-bottom: 1px solid #edf0f6;
 }
 .duration {
-  font-size: 9px;
+  font-size: 0.8125rem;
   color: #8c9ab0;
   display: flex;
   align-items: center;
@@ -649,13 +650,13 @@ p {
 }
 label {
   display: block;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 0.9375rem;
+  font-weight: 750;
   color: #62718c;
 }
 label .optional {
   color: #a6afbf;
-  font-weight: 400;
+  font-weight: 550;
   margin-left: 5px;
 }
 input,
@@ -678,7 +679,7 @@ select:focus {
 textarea {
   resize: vertical;
   line-height: 1.9;
-  font-size: 13px;
+  font-size: 1.0625rem;
   margin-top: 9px;
 }
 textarea::placeholder {
@@ -695,7 +696,7 @@ textarea::placeholder {
   display: flex;
   justify-content: space-between;
   color: #5f6f89;
-  font-size: 8px;
+  font-size: 0.75rem;
   margin-top: 7px;
   gap: 10px;
 }
@@ -707,17 +708,17 @@ textarea::placeholder {
 }
 .method-row select {
   margin-top: 9px;
-  font-size: 10px;
+  font-size: 0.875rem;
   padding: 10px 8px;
 }
 .method-help {
-  font-size: 9px;
+  font-size: 0.8125rem;
   color: #5f6f89;
   margin: 10px 0 22px;
 }
 .audit-button {
   width: 100%;
-  font-size: 11px;
+  font-size: 0.9375rem;
   min-height: 45px;
   gap: 9px;
 }
@@ -728,7 +729,7 @@ textarea::placeholder {
   margin-right: auto;
 }
 .helper {
-  font-size: 10px;
+  font-size: 0.875rem;
   line-height: 1.8;
   color: #5f6f89;
   margin: 13px 2px 0;
@@ -775,12 +776,12 @@ textarea::placeholder {
 }
 .report-empty h3 {
   color: #687a9b;
-  font-size: 14px;
-  font-weight: 650;
+  font-size: 1.125rem;
+  font-weight: 700;
   margin-bottom: 13px;
 }
 .report-empty p {
-  font-size: 11px;
+  font-size: 0.9375rem;
   max-width: 300px;
   line-height: 1.9;
   color: #5f6f89;
@@ -791,7 +792,7 @@ textarea::placeholder {
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  font-size: 8px;
+  font-size: 0.75rem;
   color: #5f6f89;
 }
 .verdict-key > span {
@@ -819,16 +820,17 @@ textarea::placeholder {
   color: #768cb9;
   padding: 6px 10px;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .report-summary {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   padding: 21px;
   border-bottom: 1px solid #edf0f6;
 }
 .report-summary button {
+  min-width: 0;
   padding: 10px 6px;
   background: #f8f9fc;
   border: 1px solid transparent;
@@ -844,13 +846,14 @@ textarea::placeholder {
   background: #f1f5ff;
 }
 .report-summary button > span:last-child {
-  font-size: 8px;
+  overflow-wrap: anywhere;
+  font-size: 0.75rem;
   color: #8795ad;
 }
 .summary-number {
-  font-size: 25px;
+  font-size: 2rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: -1px;
 }
 .supported {
@@ -890,13 +893,13 @@ textarea::placeholder {
   color: #5f6f89;
 }
 .claim-header p {
-  font-size: 13px;
+  font-size: 1.0625rem;
   line-height: 1.9;
   margin-bottom: 9px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .claim-id {
-  font-size: 8px;
+  font-size: 0.75rem;
   background: #f1f4f9;
   color: #5f6f89;
   padding: 4px;
@@ -907,8 +910,8 @@ textarea::placeholder {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 0.875rem;
+  font-weight: 750;
   border-radius: 5px;
   padding: 5px 7px;
 }
@@ -925,8 +928,8 @@ textarea::placeholder {
   padding: 0 0 21px 32px;
 }
 .claim-detail > p {
-  font-size: 12px;
-  color: #8e9bb2;
+  font-size: 1rem;
+  color: #5f6f89;
   line-height: 1.9;
 }
 .citation {
@@ -943,17 +946,18 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 0.8125rem;
 }
 .citation strong {
   flex: 1;
-  font-weight: 650;
+  font-weight: 700;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .citation blockquote {
-  font-size: 12px;
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 1.85;
   color: #65748e;
   margin: 12px 0 9px;
@@ -963,13 +967,13 @@ textarea::placeholder {
   overflow: auto;
 }
 .citation > span {
-  font-size: 8px;
+  font-size: 0.75rem;
   color: #5f6f89;
 }
 .trace {
   margin-top: 8px;
   color: #8190aa;
-  font-size: 9px;
+  font-size: 0.8125rem;
 }
 .trace summary {
   cursor: pointer;
@@ -978,7 +982,7 @@ textarea::placeholder {
 .trace summary span {
   color: #5f6f89;
   margin-left: 7px;
-  font-size: 8px;
+  font-size: 0.75rem;
 }
 .trace-step {
   border-left: 1px solid #dce4f3;
@@ -986,8 +990,8 @@ textarea::placeholder {
   padding-left: 13px;
 }
 .trace-step > span {
-  font-size: 9px;
-  font-weight: 700;
+  font-size: 0.8125rem;
+  font-weight: 750;
   color: #6e80a1;
 }
 .trace-step code {
@@ -997,13 +1001,13 @@ textarea::placeholder {
   padding: 9px;
   line-height: 1.6;
   margin: 7px 0;
-  font-size: 9px;
+  font-size: 0.8125rem;
   color: #8c9bb5;
   font-family: inherit;
 }
 .trace-step > small {
   display: block;
-  font-size: 8px;
+  font-size: 0.75rem;
 }
 .trace-candidate {
   display: flex;
@@ -1013,7 +1017,7 @@ textarea::placeholder {
   background: transparent;
   border: 0;
   color: #8d9ab1;
-  font-size: 8px;
+  font-size: 0.75rem;
   margin: 8px 0;
   text-align: left;
 }
@@ -1023,11 +1027,11 @@ textarea::placeholder {
   border-radius: 3px;
 }
 .trace-candidate small {
-  font-size: 8px;
+  font-size: 0.75rem;
   color: #afbacb;
 }
 .stop-reason {
-  font-size: 8px;
+  font-size: 0.75rem;
   margin: 15px 0 0;
 }
 .report-footnote {
@@ -1044,7 +1048,7 @@ textarea::placeholder {
   margin-top: 2px;
 }
 .report-footnote p {
-  font-size: 8px;
+  font-size: 0.75rem;
   line-height: 1.8;
   margin: 0;
 }
@@ -1056,7 +1060,7 @@ textarea::placeholder {
   border-top: 1px solid #e9edf5;
   padding: 19px 38px;
   color: #a4aec1;
-  font-size: 8px;
+  font-size: 0.75rem;
 }
 .main-footer > span:first-child {
   display: flex;
@@ -1071,7 +1075,7 @@ textarea::placeholder {
   border: 1px solid #f2d7dc;
   color: #ab4b5c;
   border-radius: 8px;
-  font-size: 11px;
+  font-size: 0.9375rem;
   line-height: 1.8;
   padding: 13px 15px;
   margin-bottom: 15px;
@@ -1101,7 +1105,7 @@ textarea::placeholder {
   margin-bottom: 12px;
 }
 .single-page > .muted {
-  font-size: 12px;
+  font-size: 1rem;
 }
 .empty-state {
   padding: 100px 25px;
@@ -1117,7 +1121,7 @@ textarea::placeholder {
   color: #7182a0;
 }
 .empty-state p {
-  font-size: 12px;
+  font-size: 1rem;
 }
 .history-list {
   background: white;
@@ -1145,7 +1149,7 @@ textarea::placeholder {
   min-width: 0;
 }
 .history-list strong {
-  font-size: 12px;
+  font-size: 1rem;
   display: block;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1153,7 +1157,7 @@ textarea::placeholder {
 }
 .history-list small {
   display: block;
-  font-size: 9px;
+  font-size: 0.8125rem;
   color: #5f6f89;
   margin-top: 8px;
 }
@@ -1168,7 +1172,7 @@ textarea::placeholder {
   justify-content: center;
 }
 .history-status {
-  font-size: 9px;
+  font-size: 0.8125rem;
   background: #f1f4fa;
   color: #8a99b4;
   border-radius: 5px;
@@ -1199,7 +1203,7 @@ textarea::placeholder {
 }
 .experiment-notice p,
 .learning-callout p {
-  font-size: 12px;
+  font-size: 1rem;
   margin: 0;
   line-height: 1.9;
 }
@@ -1222,16 +1226,16 @@ textarea::placeholder {
   margin-bottom: 20px;
 }
 .experiment-grid h3 {
-  font-size: 14px;
+  font-size: 1.125rem;
   margin-bottom: 10px;
 }
 .experiment-grid p {
   color: #5f6f89;
-  font-size: 11px;
+  font-size: 0.9375rem;
   flex: 1;
 }
 .experiment-grid button {
-  font-size: 10px;
+  font-size: 0.875rem;
   margin-top: 10px;
 }
 .section-title {
@@ -1252,17 +1256,17 @@ textarea::placeholder {
   gap: 13px;
 }
 .metrics-grid span {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #8595b2;
 }
 .metrics-grid strong {
-  font-size: 27px;
-  font-weight: 650;
+  font-size: 2.125rem;
+  font-weight: 700;
   color: #536b9c;
   letter-spacing: -1px;
 }
 .single-page > small {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #5f6f89;
   line-height: 1.9;
 }
@@ -1290,7 +1294,7 @@ textarea::placeholder {
   list-style: none;
 }
 .learning-list strong {
-  font-size: 13px;
+  font-size: 1.0625rem;
   flex: 1;
 }
 .learning-list summary > svg {
@@ -1299,7 +1303,7 @@ textarea::placeholder {
 .learning-list details p {
   padding: 15px 30px 0 40px;
   margin: 0;
-  font-size: 12px;
+  font-size: 1rem;
   color: #8b9ab3;
   line-height: 2;
 }
@@ -1339,13 +1343,13 @@ textarea::placeholder {
   min-width: 0;
 }
 .source-modal h2 {
-  font-size: 15px;
+  font-size: 1.1875rem;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .source-location {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #9aabc6;
   margin-bottom: 20px;
 }
@@ -1354,16 +1358,16 @@ textarea::placeholder {
   border-left: 3px solid #9bb3ea;
   padding: 17px;
   background: #f2f6ff;
-  font-size: 13px;
+  font-size: 1.0625rem;
   line-height: 1.9;
 }
 .source-modal h3 {
-  font-size: 11px;
+  font-size: 0.9375rem;
   color: #8c9db9;
 }
 .source-modal pre {
   font-family: inherit;
-  font-size: 11px;
+  font-size: 0.9375rem;
   line-height: 2;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -1391,12 +1395,12 @@ textarea::placeholder {
 }
 @media (max-width: 1200px) {
   .sidebar {
-    width: 220px;
+    width: 240px;
     padding-left: 14px;
     padding-right: 14px;
   }
   .main {
-    margin-left: 220px;
+    margin-left: 240px;
   }
   .workspace-content,
   .single-page {
@@ -1427,7 +1431,7 @@ textarea::placeholder {
     max-width: 300px;
   }
   .intro h1 {
-    font-size: 48px;
+    font-size: 3.25rem;
   }
   .welcome-art {
     padding: 35px 6vw;
@@ -1445,7 +1449,7 @@ textarea::placeholder {
     max-width: 100%;
   }
   .intro h1 {
-    font-size: 44px;
+    font-size: 3rem;
   }
   .sample-claim,
   .intro-foot {
@@ -1458,7 +1462,7 @@ textarea::placeholder {
     padding: 35px 25px 65px;
   }
   .welcome-form footer {
-    font-size: 9px;
+    font-size: 0.8125rem;
     bottom: 15px;
   }
   .app-shell {
@@ -1473,7 +1477,7 @@ textarea::placeholder {
   }
   .sidebar > .brand {
     padding: 0 0 16px;
-    font-size: 20px;
+    font-size: 1.5rem;
   }
   .workspace-select {
     margin-bottom: 12px;
@@ -1486,7 +1490,7 @@ textarea::placeholder {
   }
   .sidebar nav button {
     flex-shrink: 0;
-    font-size: 10px;
+    font-size: 0.875rem;
     gap: 6px;
     padding: 9px;
   }
@@ -1537,14 +1541,14 @@ textarea::placeholder {
     padding: 0 20px;
   }
   .topbar > span {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .topbar > div {
-    font-size: 9px;
+    font-size: 0.8125rem;
   }
   .local-badge {
     margin-left: 0;
-    font-size: 8px;
+    font-size: 0.75rem;
   }
   .workspace-content,
   .single-page {
@@ -1556,15 +1560,15 @@ textarea::placeholder {
   }
   .page-intro h1,
   .single-page > h1 {
-    font-size: 26px;
+    font-size: 2rem;
     letter-spacing: -1px;
   }
   .page-intro p {
-    font-size: 10px;
+    font-size: 0.875rem;
     max-width: 220px;
   }
   .page-intro .secondary {
-    font-size: 9px;
+    font-size: 0.8125rem;
     padding: 8px;
   }
   .editor-panel {
@@ -1575,14 +1579,14 @@ textarea::placeholder {
     grid-template-columns: minmax(0, 1fr);
   }
   .panel-heading p {
-    font-size: 9px;
+    font-size: 0.8125rem;
   }
   .report-panel > .panel-heading {
     padding: 20px;
   }
   .main-footer {
     padding: 18px 16px;
-    font-size: 7px;
+    font-size: 0.75rem;
   }
   .experiment-grid {
     grid-template-columns: 1fr;
@@ -1598,10 +1602,10 @@ textarea::placeholder {
     display: none;
   }
   .history-list strong {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .history-status {
-    font-size: 8px;
+    font-size: 0.75rem;
     padding: 4px;
   }
   .error.banner {
@@ -1614,7 +1618,7 @@ textarea::placeholder {
     padding: 15px;
   }
   .report-summary button > span:last-child {
-    font-size: 7px;
+    font-size: 0.75rem;
   }
   .modal-backdrop {
     padding: 12px;
@@ -1629,7 +1633,7 @@ textarea::placeholder {
     padding-left: 0;
   }
   .learning-list strong {
-    font-size: 11px;
+    font-size: 0.9375rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1650,16 +1654,16 @@ textarea::placeholder {
   margin-top: 24px;
 }
 .research-panel h2 {
-  font-size: 15px;
+  font-size: 1.1875rem;
 }
 .research-panel p {
   color: #8b99b1;
-  font-size: 11px;
+  font-size: 0.9375rem;
   line-height: 1.9;
   max-width: 720px;
 }
 .research-panel > small {
-  font-size: 9px;
+  font-size: 0.8125rem;
   color: #98a5bb;
 }
 .table-scroll {
@@ -1670,7 +1674,7 @@ textarea::placeholder {
   width: 100%;
   margin: 20px 0;
   color: #7486a5;
-  font-size: 10px;
+  font-size: 0.875rem;
   white-space: nowrap;
 }
 .evaluation-table th,
@@ -1680,9 +1684,9 @@ textarea::placeholder {
   border-bottom: 1px solid #e9eef6;
 }
 .evaluation-table th {
-  font-size: 9px;
+  font-size: 0.8125rem;
   color: #5f6f89;
-  font-weight: 650;
+  font-weight: 700;
 }
 .lab-controls {
   display: flex;
@@ -1691,10 +1695,10 @@ textarea::placeholder {
 }
 .lab-controls select {
   max-width: 330px;
-  font-size: 11px;
+  font-size: 0.9375rem;
 }
 .lab-result {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #8598b9;
   margin-top: 20px;
 }
@@ -1709,7 +1713,7 @@ textarea::placeholder {
   padding: 15px;
   background: #f5f8fd;
   line-height: 1.8;
-  font-size: 9px;
+  font-size: 0.8125rem;
 }
 @media (max-width: 760px) {
   .research-panel {
@@ -1735,7 +1739,7 @@ textarea::placeholder {
   padding: 10px 0 0;
   background: transparent;
   color: #5f77a8;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .library-form {
   border-top: 1px solid #e0e7f4;
@@ -1744,10 +1748,10 @@ textarea::placeholder {
 }
 .library-form input {
   margin: 8px 0 10px;
-  font-size: 11px;
+  font-size: 0.9375rem;
 }
 .library-form > .primary {
   padding: 7px 10px;
   min-height: 30px;
-  font-size: 10px;
+  font-size: 0.875rem;
 }

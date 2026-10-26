@@ -58,3 +58,7 @@ Earlier lexical-baseline artifacts are superseded and excluded from the release 
 See the research-method matrix and deployment notes. Local sentence extraction and English NLI remain limited. Generated aids never become original evidence. The hosted credentials probe returned authentication failure. Visual inference, full container application deployment and an independent security audit remain unverified.
 
 This delivery does not imply that a student completed the learning exercises or understands all design choices. Use the Hinglish walkthrough and actual failure traces for that learning.
+
+## Typography verification - 2026-10-26
+
+The larger, stronger type scale uses 17px claims/forms, 16px evidence and 14px verdict labels at the default browser setting. The production frontend build and actual Chrome workflow passed. A focused check measured font sizes/weights and found no page-level horizontal overflow at 320, 390, 760, 1024, 1440 and 1920px; the mobile source dialog passed too. Measurements are in [typography checks](../artifacts/typography-checks.json).

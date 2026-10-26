@@ -1,0 +1,56 @@
+{
+  "checked_date": "2026-10-26",
+  "typography": {
+    "body": {
+      "fontSize": "16px",
+      "fontWeight": "550"
+    },
+    "h1": {
+      "fontSize": "40px",
+      "fontWeight": "800"
+    },
+    "textarea": {
+      "fontSize": "17px",
+      "fontWeight": "750"
+    },
+    ".claim-header p": {
+      "fontSize": "17px",
+      "fontWeight": "700"
+    },
+    ".citation blockquote": {
+      "fontSize": "16px",
+      "fontWeight": "600"
+    },
+    ".verdict": {
+      "fontSize": "14px",
+      "fontWeight": "750"
+    }
+  },
+  "layouts": [
+    {
+      "viewport": 320,
+      "scrollWidth": 320
+    },
+    {
+      "viewport": 390,
+      "scrollWidth": 390
+    },
+    {
+      "viewport": 760,
+      "scrollWidth": 760
+    },
+    {
+      "viewport": 1024,
+      "scrollWidth": 1024
+    },
+    {
+      "viewport": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "viewport": 1920,
+      "scrollWidth": 1920
+    }
+  ],
+  "mobileSourceDialog": "passed"
+}

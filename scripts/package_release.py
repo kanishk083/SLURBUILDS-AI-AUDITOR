@@ -48,6 +48,7 @@ ARTIFACTS = [
     "verification-summary.json",
     "lexical-cli.json",
     "browser-tests.json",
+    "typography-checks.json",
     "welcome-desktop.png",
     "audit-desktop.png",
     "audit-mobile.png",
